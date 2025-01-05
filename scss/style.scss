@@ -1,0 +1,139 @@
+:root {
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-700: hsl(0, 0%, 20%);
+  --Grey-800: hsl(0, 0%, 12%);
+  --Grey-900: hsl(0, 0%, 8%);
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1.4rem;
+  color: var(--White);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+// Weights: 400, 600, 700
+
+.container {
+  background: var(--Grey-900);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  max-width: 100%;
+  background: var(--Grey-800);
+  padding: 4.2rem 4rem 4rem 4rem;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 1.6rem;
+
+  &__owner-img {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+  }
+
+  &__owner-name {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+
+  &__owner-location {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--Green);
+  }
+
+  &__owner-roles {
+    margin-bottom: 2.2rem;
+    color: hsl(0, 0%, 80%);
+  }
+}
+
+.socials {
+  list-style-type: none;
+
+  &__link,
+  &__link:visited {
+    text-decoration: none;
+    background: var(--Grey-700);
+    display: block;
+    border-radius: 0.8rem;
+    padding: 1rem 0;
+    color: var(--White);
+    width: 30rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--Green);
+      color: var(--Grey-900);
+    }
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 1.4rem;
+  }
+}
+
+.attribution {
+  font-size: 1.4rem;
+  text-align: center;
+  background: var(--Grey-700);
+  padding: 2rem;
+  color: hsl(0, 0%, 80%);
+
+  &__link,
+  &__link:visited {
+    // color: hsl(228, 45%, 44%);
+    color: var(--Green);
+    transition: decoration 0.3s ease;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
