@@ -4,7 +4,15 @@
   --Grey-700: hsl(0, 0%, 20%);
   --Grey-800: hsl(0, 0%, 12%);
   --Grey-900: hsl(0, 0%, 8%);
+}
+
+html {
   font-size: 62.5%;
+}
+@media (max-width: 23.43em) {
+  html {
+    font-size: 50%;
+  }
 }
 
 *,
