@@ -101,10 +101,25 @@ body {
   width: 30rem;
   font-weight: 600;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
-.socials__link:hover, .socials__link:visited:hover {
-  background: var(--Green);
-  color: var(--Grey-900);
+.socials__link:hover::before, .socials__link:active::before, .socials__link:visited:hover::before, .socials__link:visited:active::before {
+  transform: scale(1);
+  width: 100%;
+}
+.socials__link::before, .socials__link:visited::before {
+  content: "";
+  width: 0.5rem;
+  height: 100%;
+  background: hsl(75, 94%, 30%);
+  border-radius: 0.8rem;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
 }
 .socials li:not(:last-child) {
   margin-bottom: 1.4rem;
